@@ -1,0 +1,63 @@
+{
+  "brand": "MTF Group",
+  "brandSub": "Metalne konstrukcije",
+  "nav": {
+    "home": "Početna",
+    "about": "O nama",
+    "services": "Usluge",
+    "projects": "Projekti",
+    "contact": "Kontakt",
+    "offer": "Zatraži Ponudu"
+  },
+  "hero": {
+    "titleTop": "Snaga",
+    "titleMiddle": "Preciznost",
+    "titleBottom": "Pouzdanost",
+    "text": "Profesionalne usluge zavarivanja i bravarskih radova uz fokus na kvalitet i dugotrajnost.",
+    "cta": "Saznaj više",
+    "badge": "Certifikovan tim"
+  },
+  "about": {
+    "label": "O Nama",
+    "title": "Pružamo kompletne usluge izrade i montaže metalnih konstrukcija.",
+    "text": "MTF Group ima više od deset godina praktičnog iskustva u zavarivanju, bravarskim radovima i izradi čeličnih konstrukcija za industrijske i komercijalne objekte."
+  },
+  "features": {
+    "expertise": {
+      "title": "Iskustvo",
+      "text": "Stručan tim za zahtjevne industrijske projekte."
+    },
+    "quality": {
+      "title": "Kvalitet",
+      "text": "Pouzdana izvedba uz strogu kontrolu kvaliteta."
+    },
+    "reliability": {
+      "title": "Pouzdanost",
+      "text": "Odgovorno izvršenje i poštivanje rokova."
+    },
+    "safety": {
+      "title": "Sigurnost",
+      "text": "Sigurni procesi i rad prema standardima."
+    }
+  },
+  "services": {
+    "label": "Usluge",
+    "items": {
+      "welding": "Zavarivanje",
+      "metalwork": "Bravarija",
+      "steel": "Metalne Konstrukcije",
+      "assembly": "Montaža"
+    },
+    "descriptions": "Industrijski servisni paket {{index}}"
+  },
+  "projects": {
+    "label": "Naši Klijenti",
+    "cta": "Pogledaj sve projekte"
+  },
+  "footer": {
+    "copy": "Kvalitetna rješenja metalnih konstrukcija za industriju i infrastrukturu.",
+    "quickLinks": "Brzi Linkovi",
+    "contact": "Kontakt",
+    "address": "Sarajevo, Bosna i Hercegovina"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "brand": "MTF Group",
+  "brandSub": "Metal constructions",
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "contact": "Contact",
+    "offer": "Request Offer"
+  },
+  "hero": {
+    "titleTop": "Strength",
+    "titleMiddle": "Precision",
+    "titleBottom": "Reliability",
+    "text": "Professional welding and metal construction services built around quality and long-term durability.",
+    "cta": "Learn more",
+    "badge": "Certified team"
+  },
+  "about": {
+    "label": "About Us",
+    "title": "We deliver complete metal fabrication and installation services.",
+    "text": "MTF Group has more than a decade of practical experience in welding, locksmith works, and structural metal construction projects across industrial and commercial sites."
+  },
+  "features": {
+    "expertise": {
+      "title": "Expertise",
+      "text": "Skilled team for demanding industrial jobs."
+    },
+    "quality": {
+      "title": "Quality",
+      "text": "Reliable workmanship with strict quality control."
+    },
+    "reliability": {
+      "title": "Reliability",
+      "text": "Trustworthy execution and delivery timelines."
+    },
+    "safety": {
+      "title": "Safety",
+      "text": "Safe processes and standards-first production."
+    }
+  },
+  "services": {
+    "label": "Services",
+    "items": {
+      "welding": "Welding",
+      "metalwork": "Metalwork",
+      "steel": "Steel Structures",
+      "assembly": "Assembly"
+    },
+    "descriptions": "Industrial service package {{index}}"
+  },
+  "projects": {
+    "label": "Our Clients",
+    "cta": "See all projects"
+  },
+  "footer": {
+    "copy": "Quality metal construction solutions for industry and infrastructure.",
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "address": "Sarajevo, Bosnia and Herzegovina"
+  }
+}

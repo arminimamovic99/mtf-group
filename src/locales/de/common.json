@@ -1,0 +1,63 @@
+{
+  "brand": "MTF Group",
+  "brandSub": "Metallkonstruktionen",
+  "nav": {
+    "home": "Start",
+    "about": "Uber Uns",
+    "services": "Leistungen",
+    "projects": "Projekte",
+    "contact": "Kontakt",
+    "offer": "Angebot Anfordern"
+  },
+  "hero": {
+    "titleTop": "Starke",
+    "titleMiddle": "Prazision",
+    "titleBottom": "Zuverlassigkeit",
+    "text": "Professionelle Schweis- und Metallkonstruktionsdienstleistungen mit Fokus auf Qualitat und Langlebigkeit.",
+    "cta": "Mehr Erfahren",
+    "badge": "Zertifiziertes Team"
+  },
+  "about": {
+    "label": "Uber Uns",
+    "title": "Wir liefern komplette Metallfertigungs- und Montagedienstleistungen.",
+    "text": "MTF Group verfugt uber mehr als zehn Jahre Praxiserfahrung in Schweisarbeiten, Schlosserarbeiten und tragenden Metallkonstruktionen fur Industrie- und Gewerbeprojekte."
+  },
+  "features": {
+    "expertise": {
+      "title": "Fachwissen",
+      "text": "Erfahrenes Team fur anspruchsvolle Industrieauftrage."
+    },
+    "quality": {
+      "title": "Qualitat",
+      "text": "Zuverlassige Ausfuhrung mit strenger Qualitatskontrolle."
+    },
+    "reliability": {
+      "title": "Verlasslichkeit",
+      "text": "Termintreue und verantwortungsvolle Umsetzung."
+    },
+    "safety": {
+      "title": "Sicherheit",
+      "text": "Sichere Prozesse und standardorientierte Produktion."
+    }
+  },
+  "services": {
+    "label": "Leistungen",
+    "items": {
+      "welding": "Schweissen",
+      "metalwork": "Metallbau",
+      "steel": "Stahlkonstruktionen",
+      "assembly": "Montage"
+    },
+    "descriptions": "Industriepaket {{index}}"
+  },
+  "projects": {
+    "label": "Unsere Projekte",
+    "cta": "Alle Projekte Anzeigen"
+  },
+  "footer": {
+    "copy": "Hochwertige Metallkonstruktionslosungen fur Industrie und Infrastruktur.",
+    "quickLinks": "Schnelllinks",
+    "contact": "Kontakt",
+    "address": "Sarajevo, Bosnien und Herzegowina"
+  }
+}
