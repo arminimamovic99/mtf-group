@@ -14,7 +14,7 @@
     "titleMiddle": "Prazision",
     "titleBottom": "Zuverlassigkeit",
     "text": "Professionelle Schweis- und Metallkonstruktionsdienstleistungen mit Fokus auf Qualitat und Langlebigkeit.",
-    "cta": "Mehr Erfahren",
+    "cta": "Kontaktieren Sie uns",
     "badge": "Zertifiziertes Team"
   },
   "about": {
@@ -43,12 +43,23 @@
   "services": {
     "label": "Leistungen",
     "items": {
-      "welding": "Schweissen",
-      "metalwork": "Metallbau",
-      "steel": "Stahlkonstruktionen",
-      "assembly": "Montage"
-    },
-    "descriptions": "Industriepaket {{index}}"
+      "welding": {
+        "title": "Schweißarbeiten",
+        "description": "Professionelle Schweißarbeiten für verschiedene Metallarten mit hoher Präzision und langlebiger Verbindungsfestigkeit."
+      },
+      "metalwork": {
+        "title": "Schlosserarbeiten",
+        "description": "Herstellung, Montage und Reparatur von Metallelementen wie Zäunen, Toren und Sicherheitssystemen."
+      },
+      "steel": {
+        "title": "Metallkonstruktionen",
+        "description": "Herstellung und Montage von Stahl- und Metallkonstruktionen für Wohn-, Industrie- und Gewerbeobjekte."
+      },
+      "assembly": {
+        "title": "Montage",
+        "description": "Schnelle und zuverlässige Montage aller Arten von Metallkonstruktionen und Bauelementen vor Ort."
+      }
+    }
   },
   "projects": {
     "label": "Unsere Projekte",

@@ -3,6 +3,8 @@ import {
   Building2,
   Factory,
   HardHat,
+  Mail,
+  MapPin,
   ShieldCheck,
   Sparkles,
 } from "lucide-react"
@@ -11,6 +13,11 @@ import { useTranslation } from "react-i18next"
 import { Button } from "@/components/ui/button"
 import headerImage from "@/assets/fh2.jpg"
 import logo from "@/assets/logo.jpg"
+
+import welding from "@/assets/welding.jpg"
+import locks from "@/assets/locks.jpg"
+import metal from "@/assets/metal.jpg"
+import montage from "@/assets/montage.jpg"
 
 const clientLogos = Object.entries(
   import.meta.glob("/src/assets/clients/*.{png,jpg,jpeg,svg,webp}", {
@@ -51,10 +58,22 @@ function App() {
   ]
 
   const services = [
-    t("services.items.welding"),
-    t("services.items.metalwork"),
-    t("services.items.steel"),
-    t("services.items.assembly"),
+    {
+      key: "welding",
+      img: welding
+    },
+    {
+      key: "metalwork",
+      img: locks
+    },
+    {
+      key: "steel",
+      img: metal
+    },
+    {
+      key: "assembly",
+      img: montage
+    }
   ]
 
   return (
@@ -176,7 +195,7 @@ function App() {
             {[...clientLogos, ...clientLogos].map((client, index) => (
               <div
                 key={`${client.name}-${index}`}
-                className="mx-3 flex h-20 w-40 shrink-0 items-center justify-center rounded-sm border border-[#252525] bg-[#111111] px-4"
+                className="mx-3 flex h-20 w-40 shrink-0 items-center justify-center px-4"
               >
                 <img
                   src={client.src}
@@ -193,13 +212,16 @@ function App() {
       <section id="services" className="mx-auto max-w-6xl border-b border-[#1f1f1f] px-5 py-12 md:px-8">
         <p className="section-label">{t("services.label")}</p>
         <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {services.map((name, index) => (
-            <article key={name} className="group overflow-hidden rounded-sm border border-[#232323] bg-[#111111]">
-              <div className="h-32 bg-[linear-gradient(135deg,#111827,#1f2937_50%,#374151)] transition-transform duration-500 group-hover:scale-105" />
+          {services.map((item) => (
+            <article key={item.key} className="group overflow-hidden rounded-sm border border-[#232323] bg-[#111111]">
+              {/* <div className="h-32 bg-[linear-gradient(135deg,#111827,#1f2937_50%,#374151)] transition-transform duration-500 group-hover:scale-105" /> */}
+              <img src={item.img} className="h-32 w-full object-cover transition-transform duration-500 group-hover:scale-105" alt="" />
               <div className="border-t border-[#242424] p-4">
-                <h3 className="font-display text-xl uppercase tracking-tight">{name}</h3>
+                <h3 className="font-display text-xl uppercase tracking-tight">
+                  {t(`services.items.${item.key}.title`)}
+                </h3>
                 <p className="mt-1 text-xs text-muted-foreground">
-                  {t("services.descriptions", { index: index + 1 })}
+                  {t(`services.items.${item.key}.description`)}
                 </p>
               </div>
             </article>
@@ -238,11 +260,22 @@ function App() {
                 <Building2 className="h-4 w-4 text-primary" />
                 +387 123 456
               </li>
-              <li>info@mtf-group.test</li>
-              <li>{t("footer.address")}</li>
+              <br />
+              <li className="inline-flex items-center gap-2">
+                <Mail className="h-4 w-4 text-primary" />
+                info@mtf-group.com
+              </li>
+              <br />
+              <li className="inline-flex items-center gap-2">
+                <MapPin className="h-4 w-4 text-primary" />
+                {t("footer.address")}              
+              </li>
             </ul>
           </div>
         </div>
+        <p className="mt-8 border-t border-[#1f1f1f] pt-4 text-center text-xs text-[#6f6f6f]">
+          Powered by <a href="https://ekdsolutions.com" target="_blank" className="text-primary">EKD Solutions</a> , 2026
+        </p>
       </footer>
     </main>
   )

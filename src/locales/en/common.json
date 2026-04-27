@@ -14,7 +14,7 @@
     "titleMiddle": "Precision",
     "titleBottom": "Reliability",
     "text": "Professional welding and metal construction services built around quality and long-term durability.",
-    "cta": "Learn more",
+    "cta": "Contact us",
     "badge": "Certified team"
   },
   "about": {
@@ -43,12 +43,23 @@
   "services": {
     "label": "Services",
     "items": {
-      "welding": "Welding",
-      "metalwork": "Metalwork",
-      "steel": "Steel Structures",
-      "assembly": "Assembly"
-    },
-    "descriptions": "Industrial service package {{index}}"
+      "welding": {
+        "title": "Welding",
+        "description": "Professional welding services for various types of metals, ensuring precision and long-lasting joint strength."
+      },
+      "metalwork": {
+        "title": "Locksmith Work",
+        "description": "Fabrication, installation, and repair of metal elements such as fences, gates, and security systems."
+      },
+      "steel": {
+        "title": "Metal Constructions",
+        "description": "Production and assembly of steel and metal structures for residential, industrial, and commercial projects."
+      },
+      "assembly": {
+        "title": "Assembly",
+        "description": "Fast and reliable on-site assembly of all types of metal structures and components."
+      }
+    }
   },
   "projects": {
     "label": "Our Clients",

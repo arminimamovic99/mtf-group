@@ -14,7 +14,7 @@
     "titleMiddle": "Preciznost",
     "titleBottom": "Pouzdanost",
     "text": "Profesionalne usluge zavarivanja i bravarskih radova uz fokus na kvalitet i dugotrajnost.",
-    "cta": "Saznaj više",
+    "cta": "Kontaktiraj nas",
     "badge": "Certifikovan tim"
   },
   "about": {
@@ -43,12 +43,23 @@
   "services": {
     "label": "Usluge",
     "items": {
-      "welding": "Zavarivanje",
-      "metalwork": "Bravarija",
-      "steel": "Metalne Konstrukcije",
-      "assembly": "Montaža"
-    },
-    "descriptions": "Industrijski servisni paket {{index}}"
+      "welding": {
+        "title": "Zavarivanje",
+        "description": "Profesionalne usluge zavarivanja za različite vrste metala, uz visoku preciznost i dugotrajnu čvrstoću spojeva."
+      },
+      "metalwork": {
+        "title": "Bravarija",
+        "description": "Izrada, montaža i popravka metalnih elemenata poput ograda, kapija i sigurnosnih sistema."
+      },
+      "steel": {
+        "title": "Metalne Konstrukcije",
+        "description": "Izrada i montaža čeličnih i metalnih konstrukcija za stambene, industrijske i komercijalne objekte."
+      },
+      "assembly": {
+        "title": "Montaža",
+        "description": "Brza i pouzdana montaža svih vrsta metalnih konstrukcija i elemenata na terenu."
+      }
+    }
   },
   "projects": {
     "label": "Naši Klijenti",
