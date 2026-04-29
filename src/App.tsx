@@ -2,22 +2,26 @@ import {
   ArrowRight,
   Building2,
   Factory,
+  FolderKanban,
   HardHat,
   Mail,
   MapPin,
   ShieldCheck,
   Sparkles,
+  Users,
 } from "lucide-react"
 import { useTranslation } from "react-i18next"
+import { Link, Navigate, Route, Routes } from "react-router-dom"
 
-import { Button } from "@/components/ui/button"
+import { Button, buttonVariants } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
 import headerImage from "@/assets/fh2.jpg"
-import logo from "@/assets/logo.jpg"
+import logo from "@/assets/logoc.jpg"
 
-import welding from "@/assets/welding.jpg"
-import locks from "@/assets/locks.jpg"
-import metal from "@/assets/metal.jpg"
-import montage from "@/assets/montage.jpg"
+import welding from "@/assets/services/welding.JPG"
+import metalwork from "@/assets/services/metalwork.png"
+import steel from "@/assets/services/steel.png"
+import assembly from "@/assets/services/assembly.png"
 
 const clientLogos = Object.entries(
   import.meta.glob("/src/assets/clients/*.{png,jpg,jpeg,svg,webp}", {
@@ -31,7 +35,7 @@ const clientLogos = Object.entries(
     src: src as string,
   }))
 
-function App() {
+function LandingPage() {
   const { t, i18n } = useTranslation()
 
   const features = [
@@ -58,22 +62,17 @@ function App() {
   ]
 
   const services = [
-    {
-      key: "welding",
-      img: welding
-    },
-    {
-      key: "metalwork",
-      img: locks
-    },
-    {
-      key: "steel",
-      img: metal
-    },
-    {
-      key: "assembly",
-      img: montage
-    }
+    { key: "welding", img: welding },
+    { key: "metalwork", img: metalwork },
+    { key: "steel", img: steel },
+    { key: "assembly", img: assembly },
+  ]
+
+  const stats = [
+    { icon: Sparkles, number: "10+", label: t("stats.experience") },
+    { icon: FolderKanban, number: "100+", label: t("stats.projects") },
+    { icon: Users, number: "50+", label: t("stats.clients") },
+    { icon: ShieldCheck, number: "100%", label: t("stats.quality") },
   ]
 
   return (
@@ -86,7 +85,7 @@ function App() {
         <div className="mx-auto max-w-6xl px-5 md:px-8">
           <header className="flex items-center justify-between">
             <div>
-              <img className="w-[140px] sm:w-[220px] pt-7 pb-4" src={logo} alt="" />
+              <img className="w-[140px] pb-4 pt-7 sm:w-[220px]" src={logo} alt="" />
             </div>
             <nav className="hidden items-center gap-5 text-xs uppercase tracking-[0.18em] text-[#cccccc] md:flex">
               <a href="#home" className="text-primary">
@@ -126,7 +125,7 @@ function App() {
             className="relative left-1/2 mt-8 w-screen -translate-x-1/2 overflow-hidden shadow-[0_40px_120px_rgba(0,0,0,0.7)]"
           >
             <img
-              src={headerImage}
+              src={welding}
               alt="Metal worker welding in workshop"
               className="absolute inset-0 h-full w-full object-cover"
             />
@@ -151,12 +150,32 @@ function App() {
                 </Button>
               </div>
             </div>
-
-            {/* <div className="absolute bottom-5 left-5 z-10 inline-flex items-center gap-2 rounded bg-black/60 px-3 py-2 text-xs uppercase tracking-[0.2em] text-primary">
-              <Hammer className="h-3.5 w-3.5" />
-              {t("hero.badge")}
-            </div> */}
           </div>
+        </div>
+      </section>
+
+      <section className="border-b border-[#1f1f1f] bg-[#070b12]">
+        <div className="mx-auto grid max-w-6xl gap-0 sm:grid-cols-2 lg:grid-cols-4">
+          {stats.map((item, index) => {
+            const Icon = item.icon
+
+            return (
+              <article
+                key={item.label}
+                className={`flex items-center gap-4 px-5 py-6 md:px-7 ${
+                  index !== stats.length - 1 ? "lg:border-r lg:border-[#1f2933]" : ""
+                }`}
+              >
+                <Icon className="h-10 w-10 text-primary" />
+                <div>
+                  <p className="text-5xl font-extrabold leading-none">{item.number}</p>
+                  <p className="mt-2 text-sm font-semibold uppercase tracking-[0.07em] text-[#c5c9d0]">
+                    {item.label}
+                  </p>
+                </div>
+              </article>
+            )
+          })}
         </div>
       </section>
 
@@ -209,75 +228,164 @@ function App() {
         </div>
       </section>
 
-      <section id="services" className="mx-auto max-w-6xl border-b border-[#1f1f1f] px-5 py-12 md:px-8">
-        <p className="section-label">{t("services.label")}</p>
-        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <section id="services" className="mx-auto max-w-6xl border-b border-[#1f1f1f] px-0 py-12 md:px-0">
+        <div className="px-5 md:px-8">
+          <p className="section-label">{t("services.label")}</p>
+        </div>
+        <div className="mt-6 space-y-[1px] bg-[#2a2a2a]">
           {services.map((item) => (
-            <article key={item.key} className="group overflow-hidden rounded-sm border border-[#232323] bg-[#111111]">
-              {/* <div className="h-32 bg-[linear-gradient(135deg,#111827,#1f2937_50%,#374151)] transition-transform duration-500 group-hover:scale-105" /> */}
-              <img src={item.img} className="h-32 w-full object-cover transition-transform duration-500 group-hover:scale-105" alt="" />
-              <div className="border-t border-[#242424] p-4">
-                <h3 className="font-display text-xl uppercase tracking-tight">
+            <Link
+              key={item.key}
+              to={`/${item.key}`}
+              className="service-row group block"
+            >
+              <div className="service-bg-wrap">
+                <img
+                  src={item.img}
+                  className="service-bg-image"
+                  alt={t(`services.items.${item.key}.title`)}
+                />
+                <div className="service-image-overlay" />
+              </div>
+
+              {/* <div className="service-rail">
+                <span className="service-rail-text">
+                  {t(`services.items.${item.key}.title`)}
+                </span>
+              </div> */}
+
+              <div className="service-content">
+                <span className="mb-3 block h-[3px] w-10 bg-primary" />
+                <h3 className="font-display text-4xl uppercase leading-none tracking-tight md:text-5xl">
                   {t(`services.items.${item.key}.title`)}
                 </h3>
-                <p className="mt-1 text-xs text-muted-foreground">
+                <p className="mt-4 max-w-md text-base leading-relaxed text-[#b7b7b7]">
                   {t(`services.items.${item.key}.description`)}
                 </p>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </section>
 
+      <footer id="contact" className="footer-pattern mx-auto w-full px-5 py-12 md:px-8 flex justify-center">
+        <div className="max-w-6xl">
+          <div className="grid gap-8 md:grid-cols-[1.2fr_1fr_1fr]">
+            <div>
+              <p className="font-display text-3xl uppercase tracking-wider text-primary">
+                {t("brand")}
+              </p>
+              <p className="mt-3 max-w-sm text-sm text-muted-foreground">
+                {t("footer.copy")}
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xs uppercase tracking-[0.2em] text-primary">
+                {t("footer.quickLinks")}
+              </h3>
+              <ul className="mt-3 space-y-1 text-sm text-[#d5d5d5]">
+                <li>{t("nav.about")}</li>
+                <li>{t("nav.services")}</li>
+                <li>{t("nav.projects")}</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xs uppercase tracking-[0.2em] text-primary">
+                {t("footer.contact")}
+              </h3>
+              <ul className="mt-3 space-y-2 text-sm text-[#d5d5d5]">
+                <li className="inline-flex items-center gap-2">
+                  <Building2 className="h-4 w-4 text-primary" />
+                  +387 123 456
+                </li>
+                <br />
+                <li className="inline-flex items-center gap-2">
+                  <Mail className="h-4 w-4 text-primary" />
+                  info@mtf-group.com
+                </li>
+                <br />
+                <li className="inline-flex items-center gap-2">
+                  <MapPin className="h-4 w-4 text-primary" />
+                  {t("footer.address")}
+                </li>
+              </ul>
+            </div>
+          </div>
+          <p className="mt-8 border-t border-[#1f1f1f] pt-4 text-center text-xs text-[#6f6f6f]">
+            Powered by <a href="https://ekdsolutions.com" target="_blank" className="text-primary">EKD Solutions</a> , 2026
+          </p>
 
-
-      <footer id="contact" className="mx-auto max-w-6xl px-5 py-12 md:px-8">
-        <div className="grid gap-8 md:grid-cols-[1.2fr_1fr_1fr]">
-          <div>
-            <p className="font-display text-3xl uppercase tracking-wider text-primary">
-              {t("brand")}
-            </p>
-            <p className="mt-3 max-w-sm text-sm text-muted-foreground">
-              {t("footer.copy")}
-            </p>
-          </div>
-          <div>
-            <h3 className="text-xs uppercase tracking-[0.2em] text-primary">
-              {t("footer.quickLinks")}
-            </h3>
-            <ul className="mt-3 space-y-1 text-sm text-[#d5d5d5]">
-              <li>{t("nav.about")}</li>
-              <li>{t("nav.services")}</li>
-              <li>{t("nav.projects")}</li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-xs uppercase tracking-[0.2em] text-primary">
-              {t("footer.contact")}
-            </h3>
-            <ul className="mt-3 space-y-2 text-sm text-[#d5d5d5]">
-              <li className="inline-flex items-center gap-2">
-                <Building2 className="h-4 w-4 text-primary" />
-                +387 123 456
-              </li>
-              <br />
-              <li className="inline-flex items-center gap-2">
-                <Mail className="h-4 w-4 text-primary" />
-                info@mtf-group.com
-              </li>
-              <br />
-              <li className="inline-flex items-center gap-2">
-                <MapPin className="h-4 w-4 text-primary" />
-                {t("footer.address")}              
-              </li>
-            </ul>
-          </div>
         </div>
-        <p className="mt-8 border-t border-[#1f1f1f] pt-4 text-center text-xs text-[#6f6f6f]">
-          Powered by <a href="https://ekdsolutions.com" target="_blank" className="text-primary">EKD Solutions</a> , 2026
-        </p>
       </footer>
     </main>
+  )
+}
+
+function ServicePage({ serviceKey }: { serviceKey: "welding" | "metalwork" | "steel" | "assembly" }) {
+  const { t, i18n } = useTranslation()
+
+  return (
+    <main className="bg-background text-foreground">
+      <section className="relative isolate overflow-hidden border-b border-[#1f1f1f]">
+        {/* <div className="absolute inset-0 -z-20 bg-[linear-gradient(130deg,#0a0a0a_20%,#111827_58%,#0a0a0a_95%)]" /> */}
+        <div className="mx-auto max-w-6xl px-5 md:px-8">
+          <header className="flex items-center justify-between py-6">
+            <img className="w-[140px] sm:w-[220px]" src={logo} alt="" />
+            <div className="flex items-center gap-2">
+              <Button variant="outline" size="sm" onClick={() => void i18n.changeLanguage("bs")}>
+                BS
+              </Button>
+              <Button variant="outline" size="sm" onClick={() => void i18n.changeLanguage("en")}>
+                EN
+              </Button>
+              <Button variant="outline" size="sm" onClick={() => void i18n.changeLanguage("de")}>
+                DE
+              </Button>
+            </div>
+          </header>
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden border-b border-[#1f1f1f]">
+        <img src={headerImage} alt="" className="absolute inset-0 h-full w-full object-cover" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.9)_0%,rgba(0,0,0,0.5)_100%)]" />
+        <div className="relative mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
+          <h1 className="font-display text-5xl uppercase tracking-tight md:text-7xl">
+            {t(`services.items.${serviceKey}.title`)}
+          </h1>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-5 py-12 md:px-8">
+        <p className="max-w-3xl text-lg leading-relaxed text-[#c7c7c7]">
+          {t(`services.items.${serviceKey}.description`)}
+        </p>
+        <p className="mt-5 max-w-3xl text-base leading-relaxed text-muted-foreground">
+          {t(`services.items.${serviceKey}.longText`)}
+        </p>
+        <ul className="mt-6 space-y-2 text-base text-[#e1e1e1]">
+          {[1, 2, 3].map((n) => (
+            <li key={n}>{"\u2714"} {t(`services.items.${serviceKey}.bullets.${n - 1}`)}</li>
+          ))}
+        </ul>
+        <Link to="/" className={cn(buttonVariants(), "mt-8 inline-flex")}>
+          {t("services.backToHome")}
+        </Link>
+      </section>
+    </main>
+  )
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/welding" element={<ServicePage serviceKey="welding" />} />
+      <Route path="/metalwork" element={<ServicePage serviceKey="metalwork" />} />
+      <Route path="/steel" element={<ServicePage serviceKey="steel" />} />
+      <Route path="/assembly" element={<ServicePage serviceKey="assembly" />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
   )
 }
 

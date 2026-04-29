@@ -45,21 +45,47 @@
     "items": {
       "welding": {
         "title": "Schweißarbeiten",
-        "description": "Professionelle Schweißarbeiten für verschiedene Metallarten mit hoher Präzision und langlebiger Verbindungsfestigkeit."
+        "description": "Professionelle Schweißarbeiten für verschiedene Metallarten mit hoher Präzision und langlebiger Verbindungsfestigkeit.",
+        "longText": "Professionelle Schweißarbeiten für alle Metallarten mit maximaler Präzision und langlebiger Verbindungsfestigkeit. Wir nutzen moderne Techniken und Ausrüstung, um eine Qualität sicherzustellen, die auch anspruchsvollste Projekte erfüllt. Unser Team hat Erfahrung mit Industrie-, Bau- und Spezialkonstruktionen, bei denen Sicherheit und Zuverlässigkeit entscheidend sind.",
+        "bullets": [
+          "MIG / MAG / TIG-Schweißen",
+          "Einsätze vor Ort und in der Werkstatt",
+          "Hoher Standard der Endbearbeitung"
+        ]
       },
       "metalwork": {
         "title": "Schlosserarbeiten",
-        "description": "Herstellung, Montage und Reparatur von Metallelementen wie Zäunen, Toren und Sicherheitssystemen."
+        "description": "Herstellung, Montage und Reparatur von Metallelementen wie Zäunen, Toren und Sicherheitssystemen.",
+        "longText": "Wir bieten einen kompletten Schlosser-Service — von der Idee und Fertigung bis zur Montage und Wartung. Wir sind spezialisiert auf funktionale und ästhetisch hochwertige Metallelemente, zugeschnitten auf Ihre Anforderungen. Ob einfache oder komplexe Projekte: Wir garantieren Präzision, Langlebigkeit und Sicherheit.",
+        "bullets": [
+          "Zäune und Tore",
+          "Metallkonstruktionen kleinerer Dimensionen",
+          "Reparaturen und Nachbearbeitung bestehender Elemente"
+        ]
       },
       "steel": {
         "title": "Metallkonstruktionen",
-        "description": "Herstellung und Montage von Stahl- und Metallkonstruktionen für Wohn-, Industrie- und Gewerbeobjekte."
+        "description": "Herstellung und Montage von Stahl- und Metallkonstruktionen für Wohn-, Industrie- und Gewerbeobjekte.",
+        "longText": "Wir planen und fertigen Stahl- und Metallkonstruktionen für unterschiedliche Zwecke — von Wohn- bis Industrie- und Gewerbeobjekten. Jedes Projekt realisieren wir unter strikter Einhaltung technischer Standards mit Fokus auf Stabilität, Langlebigkeit und Sicherheit. Unser Ansatz verbindet hochwertige Fertigung, präzise Planung und effiziente Umsetzung.",
+        "bullets": [
+          "Hallen und Industrieobjekte",
+          "Tragende Konstruktionen",
+          "Individuelle Projekte nach Maß"
+        ]
       },
       "assembly": {
         "title": "Montage",
-        "description": "Schnelle und zuverlässige Montage aller Arten von Metallkonstruktionen und Bauelementen vor Ort."
+        "description": "Schnelle und zuverlässige Montage aller Arten von Metallkonstruktionen und Bauelementen vor Ort.",
+        "longText": "Wir bieten professionelle Montage aller Arten von Metallkonstruktionen und Bauelementen direkt vor Ort mit maximaler Effizienz und Sicherheit. Unser Team sorgt für eine schnelle und präzise Installation unter Einhaltung von Terminen und höchsten Ausführungsstandards. Unabhängig von der Komplexität garantieren wir eine zuverlässige Umsetzung von Anfang bis Ende.",
+        "bullets": [
+          "Montage vor Ort",
+          "Sicherheitsstandards",
+          "Schnelle und organisierte Ausführung"
+        ]
       }
-    }
+    },
+    "pageText": "Kontaktieren Sie uns für ein detailliertes Angebot, technische Beratung und einen auf Ihr Projekt abgestimmten Ausführungsplan.",
+    "backToHome": "Zurück zur Startseite"
   },
   "projects": {
     "label": "Unsere Projekte",
@@ -70,5 +96,11 @@
     "quickLinks": "Schnelllinks",
     "contact": "Kontakt",
     "address": "Sarajevo, Bosnien und Herzegowina"
+  },
+  "stats": {
+    "experience": "jahre erfahrung",
+    "projects": "abgeschlossene projekte",
+    "clients": "zufriedene kunden",
+    "quality": "engagement für qualität"
   }
 }

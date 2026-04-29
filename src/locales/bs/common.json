@@ -45,21 +45,47 @@
     "items": {
       "welding": {
         "title": "Zavarivanje",
-        "description": "Profesionalne usluge zavarivanja za različite vrste metala, uz visoku preciznost i dugotrajnu čvrstoću spojeva."
+        "description": "Profesionalne usluge zavarivanja za različite vrste metala, uz visoku preciznost i dugotrajnu čvrstoću spojeva.",
+        "longText": "Profesionalne usluge zavarivanja za sve vrste metala, uz maksimalnu preciznost i dugotrajnu čvrstoću spojeva. Koristimo savremene tehnike i opremu kako bismo osigurali kvalitet koji zadovoljava i najzahtjevnije projekte. Naš tim ima iskustvo u radu na industrijskim, građevinskim i specijaliziranim konstrukcijama, gdje su sigurnost i pouzdanost ključni.",
+        "bullets": [
+          "MIG / MAG / TIG zavarivanje",
+          "Rad na terenu i u radionici",
+          "Visok standard završne obrade"
+        ]
       },
       "metalwork": {
         "title": "Bravarija",
-        "description": "Izrada, montaža i popravka metalnih elemenata poput ograda, kapija i sigurnosnih sistema."
+        "description": "Izrada, montaža i popravka metalnih elemenata poput ograda, kapija i sigurnosnih sistema.",
+        "longText": "Nudimo kompletnu uslugu bravarskih radova — od ideje i izrade do montaže i održavanja. Specijalizirani smo za izradu funkcionalnih i estetski kvalitetnih metalnih elemenata prilagođenih vašim potrebama. Bez obzira radi li se o jednostavnim ili kompleksnim projektima, garantujemo preciznost, trajnost i sigurnost.",
+        "bullets": [
+          "Ograde i kapije",
+          "Metalne konstrukcije manjih dimenzija",
+          "Popravke i dorade postojećih elemenata"
+        ]
       },
       "steel": {
-        "title": "Metalne Konstrukcije",
-        "description": "Izrada i montaža čeličnih i metalnih konstrukcija za stambene, industrijske i komercijalne objekte."
+        "title": "Konstrukcije",
+        "description": "Izrada i montaža čeličnih i metalnih konstrukcija za stambene, industrijske i komercijalne objekte.",
+        "longText": "Projektujemo i izrađujemo čelične i metalne konstrukcije za različite namjene — od stambenih do industrijskih i komercijalnih objekata. Svaki projekat realizujemo uz strogo poštivanje tehničkih standarda, sa fokusom na stabilnost, dugotrajnost i sigurnost. Naš pristup kombinuje kvalitetnu izradu, precizno planiranje i efikasnu realizaciju.",
+        "bullets": [
+          "Hale i industrijski objekti",
+          "Nosive konstrukcije",
+          "Individualni projekti po mjeri"
+        ]
       },
       "assembly": {
         "title": "Montaža",
-        "description": "Brza i pouzdana montaža svih vrsta metalnih konstrukcija i elemenata na terenu."
+        "description": "Brza i pouzdana montaža svih vrsta metalnih konstrukcija i elemenata na terenu.",
+        "longText": "Pružamo profesionalnu montažu svih vrsta metalnih konstrukcija i elemenata na terenu, uz maksimalnu efikasnost i sigurnost. Naš tim osigurava brzu i preciznu instalaciju, poštujući rokove i najviše standarde izvođenja radova. Bez obzira na kompleksnost projekta, garantujemo pouzdanu realizaciju od početka do kraja.",
+        "bullets": [
+          "Montaža na terenu",
+          "Sigurnosni standardi",
+          "Brza i organizovana izvedba"
+        ]
       }
-    }
+    },
+    "pageText": "Kontaktirajte nas za detaljnu ponudu, tehničke konsultacije i plan izvedbe prilagođen vašem projektu.",
+    "backToHome": "Nazad na početnu"
   },
   "projects": {
     "label": "Naši Klijenti",
@@ -70,5 +96,11 @@
     "quickLinks": "Brzi Linkovi",
     "contact": "Kontakt",
     "address": "Sarajevo, Bosna i Hercegovina"
+  },
+  "stats": {
+    "experience": "godina iskustva",
+    "projects": "završenih projekata",
+    "clients": "zadovoljnih klijenata",
+    "quality": "posvećenost kvalitetu"
   }
 }

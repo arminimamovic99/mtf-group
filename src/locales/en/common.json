@@ -45,21 +45,47 @@
     "items": {
       "welding": {
         "title": "Welding",
-        "description": "Professional welding services for various types of metals, ensuring precision and long-lasting joint strength."
+        "description": "Professional welding services for various types of metals, ensuring precision and long-lasting joint strength.",
+        "longText": "Professional welding services for all types of metals, with maximum precision and long-lasting joint strength. We use modern techniques and equipment to ensure quality that meets even the most demanding projects. Our team has experience on industrial, construction, and specialized structures where safety and reliability are essential.",
+        "bullets": [
+          "MIG / MAG / TIG welding",
+          "On-site and workshop work",
+          "High finishing standards"
+        ]
       },
       "metalwork": {
         "title": "Locksmith Work",
-        "description": "Fabrication, installation, and repair of metal elements such as fences, gates, and security systems."
+        "description": "Fabrication, installation, and repair of metal elements such as fences, gates, and security systems.",
+        "longText": "We provide complete locksmith services — from concept and fabrication to installation and maintenance. We specialize in producing functional and aesthetically refined metal elements tailored to your needs. Whether the project is simple or complex, we guarantee precision, durability, and safety.",
+        "bullets": [
+          "Fences and gates",
+          "Small-scale metal structures",
+          "Repairs and refinements of existing elements"
+        ]
       },
       "steel": {
         "title": "Metal Constructions",
-        "description": "Production and assembly of steel and metal structures for residential, industrial, and commercial projects."
+        "description": "Production and assembly of steel and metal structures for residential, industrial, and commercial projects.",
+        "longText": "We design and manufacture steel and metal structures for various purposes — from residential to industrial and commercial facilities. Every project is delivered with strict compliance to technical standards, focused on stability, durability, and safety. Our approach combines quality fabrication, precise planning, and efficient execution.",
+        "bullets": [
+          "Halls and industrial facilities",
+          "Load-bearing structures",
+          "Custom-made individual projects"
+        ]
       },
       "assembly": {
         "title": "Assembly",
-        "description": "Fast and reliable on-site assembly of all types of metal structures and components."
+        "description": "Fast and reliable on-site assembly of all types of metal structures and components.",
+        "longText": "We provide professional on-site assembly of all types of metal structures and elements, with maximum efficiency and safety. Our team ensures fast and precise installation while respecting deadlines and the highest execution standards. Regardless of project complexity, we guarantee reliable delivery from start to finish.",
+        "bullets": [
+          "On-site assembly",
+          "Safety standards",
+          "Fast and organized execution"
+        ]
       }
-    }
+    },
+    "pageText": "Contact us for a detailed quote, technical consultation, and an execution plan tailored to your project.",
+    "backToHome": "Back to home"
   },
   "projects": {
     "label": "Our Clients",
@@ -70,5 +96,11 @@
     "quickLinks": "Quick Links",
     "contact": "Contact",
     "address": "Sarajevo, Bosnia and Herzegovina"
+  },
+  "stats": {
+    "experience": "years of experience",
+    "projects": "completed projects",
+    "clients": "satisfied clients",
+    "quality": "dedication to quality"
   }
 }
