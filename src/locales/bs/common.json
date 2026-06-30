@@ -91,6 +91,10 @@
     "label": "Naši Klijenti",
     "cta": "Pogledaj sve projekte"
   },
+  "gallery": {
+    "label": "Galerija fotografija",
+    "header": "Naš rad u slikama..."
+  },
   "footer": {
     "copy": "Kvalitetna rješenja metalnih konstrukcija za industriju i infrastrukturu.",
     "quickLinks": "Brzi Linkovi",

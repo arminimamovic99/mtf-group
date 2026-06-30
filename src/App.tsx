@@ -22,6 +22,17 @@ import welding from "@/assets/services/welding.JPG"
 import metalwork from "@/assets/services/metalwork.png"
 import steel from "@/assets/services/steel.png"
 import assembly from "@/assets/services/assembly.png"
+import Gallery from "./components/Gallery"
+
+const imageModules = import.meta.glob(
+  "/src/assets/gallery/*.{jpg,jpeg,png,webp,JPG}",
+  {
+    eager: true,
+    import: "default",
+  }
+);
+console.log({imageModules})
+const images = Object.values(imageModules) as string[];
 
 const clientLogos = Object.entries(
   import.meta.glob("/src/assets/clients/*.{png,jpg,jpeg,svg,webp}", {
@@ -133,7 +144,7 @@ function LandingPage() {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_68%_62%,rgba(249,115,22,0.34),transparent_36%)]" />
 
             <div className="relative z-10 mx-auto flex min-h-[430px] w-full max-w-6xl items-center px-5 py-10 md:min-h-[520px] md:px-8">
-              <div className="max-w-lg bg-black/62 p-5 md:p-7">
+              <div className="max-w-lg bg-black/62 p-3 md:p-5">
                 <h1 className="font-display text-5xl uppercase leading-[0.95] tracking-tight md:text-7xl">
                   {t("hero.titleTop")}
                   <br />
@@ -268,6 +279,17 @@ function LandingPage() {
         </div>
       </section>
 
+      <section id="gallery" className="mx-auto max-w-6xl border-b border-[#1f1f1f] px-5 md:px-8 py-12">
+        <div className="px-5 md:px-8 mb-6">
+          <p className="section-label">{t("gallery.label")}</p>
+
+          <h2 className="mt-2 max-w-2xl text-2xl font-semibold leading-tight md:text-3xl">
+          {t("gallery.header")}
+          </h2>
+        </div>
+          <Gallery images={images}/>
+      </section>
+
       <footer id="contact" className="footer-pattern mx-auto w-full px-5 py-12 md:px-8 flex justify-center">
         <div className="max-w-6xl">
           <div className="grid gap-8 md:grid-cols-[1.2fr_1fr_1fr]">
@@ -296,7 +318,7 @@ function LandingPage() {
               <ul className="mt-3 space-y-2 text-sm text-[#d5d5d5]">
                 <li className="inline-flex items-center gap-2">
                   <Building2 className="h-4 w-4 text-primary" />
-                  +387 123 456
+                  +387 60 30 26 494
                 </li>
                 <br />
                 <li className="inline-flex items-center gap-2">

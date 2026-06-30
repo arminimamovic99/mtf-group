@@ -91,6 +91,10 @@
     "label": "Unsere Projekte",
     "cta": "Alle Projekte Anzeigen"
   },
+  "gallery": {
+    "label": "Fotogalerie",
+    "header": "Unsere Arbeit in Bildern..."
+  },
   "footer": {
     "copy": "Hochwertige Metallkonstruktionslosungen fur Industrie und Infrastruktur.",
     "quickLinks": "Schnelllinks",

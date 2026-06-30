@@ -91,6 +91,10 @@
     "label": "Our Clients",
     "cta": "See all projects"
   },
+  "gallery": {
+    "label": "Image Gallery",
+    "header": "Our story told through photos"
+  },
   "footer": {
     "copy": "Quality metal construction solutions for industry and infrastructure.",
     "quickLinks": "Quick Links",
